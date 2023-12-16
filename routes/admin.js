@@ -12,4 +12,5 @@ Router.post('/product', (req, res, next) => {
     res.redirect('/')
 })
 
+
 module.exports = Router
