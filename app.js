@@ -9,6 +9,8 @@ const success=require('./routes/success')
 const app=express()
 app.use(bodyParser.urlencoded({extended:false}))
 
+app.use(express.static(path.join(__dirname,'public')))
+
 app.use('/shop',shopRoutes)
 app.use('/admin',adminRoutes)
 app.use(contactUs)
