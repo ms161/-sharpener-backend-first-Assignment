@@ -3,10 +3,7 @@ const path=require('path')
 const router=express.Router()
 
 const rootDir=require('../util/path')
-
-router.post('/success',(req,res)=>{
-   
-    res.sendFile(path.join(rootDir,'views','success.html'))
-})
+const success=require('../controllers/products')
+router.post('/success',success.success)
 
 module.exports=router

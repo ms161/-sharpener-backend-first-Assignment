@@ -3,10 +3,8 @@ const Router = express.Router()
 const path=require('path')
 
 const rootDir=require('../util/path')
-
-Router.get('/addproduct', (req, res, next) => {
-res.sendFile(path.join(rootDir,'views','add-product.html'))
-})
+const product=require('../controllers/products')
+Router.get('/addproduct', product.getAddProduct)
 
 Router.post('/product', (req, res, next) => {
     console.log(req.body)
